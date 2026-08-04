@@ -1,0 +1,7 @@
+interface:
+  display_name: "其乐帖子转换器"
+  short_description: "把 Markdown 原文转换为其乐论坛 BBCode"
+  default_prompt: "Use $keylol-post-converter to convert the attached document into Keylol forum BBCode."
+
+policy:
+  allow_implicit_invocation: true

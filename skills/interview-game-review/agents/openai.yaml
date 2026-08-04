@@ -1,0 +1,4 @@
+interface:
+  display_name: "采访式游戏评测"
+  short_description: "采访真实体验，扫描外部盲点，写成自然且有文笔的个人评测"
+  default_prompt: "使用 $interview-game-review 采访我的真实游玩体验，在观点稳定后扫描外部评测寻找盲点，并协助我写成一篇自然、有文笔、适合游戏论坛发布的个人评测。"

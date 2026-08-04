@@ -1,0 +1,7 @@
+interface:
+  display_name: "个人游戏评测成文"
+  short_description: "把已确认的真实体验写成自然、有文笔且可直接发布的中文游戏评测"
+  default_prompt: "使用 $personal-game-review-prose 根据我已经确认的观点材料写成或改好一篇中文游戏评测，保留事实、评价力度和个人声音。"
+
+policy:
+  allow_implicit_invocation: true
