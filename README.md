@@ -4,11 +4,11 @@ Sanmu 的个人 Skills 集合，用于统一管理和分发 Codex 等 Agent 工�
 
 ## 当前 Skills
 
-| Skill | 用途 | 源仓库 |
+| Skill | 用途 | 目录 |
 | --- | --- | --- |
-| `keylol-post-converter` | 将 Markdown 或纯文本转换为其乐论坛 BBCode | [Fusanmu/keylol-post-converter](https://github.com/Fusanmu/keylol-post-converter) |
-| `personal-game-review-prose` | 将已确认的真实体验整理成中文游戏评测 | [Fusanmu/personal-game-review-prose](https://github.com/Fusanmu/personal-game-review-prose) |
-| `interview-game-review` | 通过采访、观点账本和盲点扫描协助完成游戏评测 | [Fusanmu/interview-game-review](https://github.com/Fusanmu/interview-game-review) |
+| `keylol-post-converter` | 将 Markdown 或纯文本转换为其乐论坛 BBCode | [`skills/keylol-post-converter`](skills/keylol-post-converter) |
+| `personal-game-review-prose` | 将已确认的真实体验整理成中文游戏评测 | [`skills/personal-game-review-prose`](skills/personal-game-review-prose) |
+| `interview-game-review` | 通过采访、观点账本和盲点扫描协助完成游戏评测 | [`skills/interview-game-review`](skills/interview-game-review) |
 
 ## 目录结构
 
@@ -32,10 +32,8 @@ https://github.com/Fusanmu/Sanmu-Skill
 
 刷新技能列表后即可分别安装和管理这 3 个 Skill。CC Switch 会根据各目录中的 `SKILL.md` 发现技能。
 
-## 更新机制
+## 维护方式
 
-原来的 3 个仓库是源仓库，内容更新后由 `.github/workflows/sync-skills.yml` 定期同步到这里。也可以在 GitHub Actions 中手动运行 `Sync skills from upstream`。
+本仓库是这 3 个 Skill 的唯一源仓库。以后请直接修改对应的 `skills/<skill-name>/` 目录并提交；CC Switch 刷新后即可发现更新。
 
-同步完成后，在 CC Switch 中刷新技能列表，再执行单项更新或全部更新。
-
-请直接在各自的源仓库中修改 Skill；`skills/` 目录由同步工作流维护，手动修改可能在下一次同步时被覆盖。
+原来的 3 个独立仓库仅保留历史内容，已经迁移为私有归档仓库，不再参与日常维护。总仓库不再从其他仓库自动同步，因此在这里的修改不会被覆盖。
