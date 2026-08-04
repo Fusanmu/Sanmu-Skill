@@ -64,3 +64,4 @@ python scripts/review_draft.py review.md --anchor "用户原话"
 调用 `$interview-game-review`，说明游戏、平台／版本、游玩进度、剧透边界以及希望得到的文章类型。若已有采访、笔记或旧稿，可直接提供，项目会从现有状态继续，不会强制重新开始采访。
 
 完成观点整理后，如需进一步改善中文成文质量，可将确认后的材料交给 `$personal-game-review-prose`。
+

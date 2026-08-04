@@ -60,3 +60,4 @@ python scripts/compare_drafts.py draft.md revision.md --diff
 ## 在 Codex 中使用
 
 调用 `$personal-game-review-prose`，并提供已经确认的观点材料、旧稿或修改要求。若只要求输出正文，检查过程可以不展示，但不能跳过文件闭环、机械检查和人工回读。
+
