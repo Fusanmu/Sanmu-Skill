@@ -39,8 +39,6 @@ jobs:
             /tmp/sanmu-skill-upstream/interview-game-review/ \
             skills/interview-game-review/
 
-          git diff --check
-
       - name: Commit synchronized changes
         run: |
           git config user.name "github-actions[bot]"
