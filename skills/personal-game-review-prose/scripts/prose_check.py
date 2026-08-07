@@ -32,7 +32,8 @@ CONTRAST_RE = re.compile(
     r"[^。！？!?\n]{0,60}(?:而是|却是|反而是|更是)"
 )
 SOFT_CONTRAST_RE = re.compile(
-    r"(?:未必|不一定|看似)[^。！？!?\n]{0,60}(?:却|但|其实|实际(?:上)?)"
+    r"(?:未必|不一定)[^。！？!?\n]{0,60}(?:却|但)|"
+    r"看似[^。！？!?\n]{0,40}(?:其实|实际(?:上)?)"
 )
 REDUCTIVE_INSIGHT_RE = re.compile(
     r"(?:不再|不只|并非只)[^。！？!?\n]{0,12}(?:只是|只剩|依靠|靠|依赖)"
@@ -368,9 +369,9 @@ def run_checks(text: str) -> list[Finding]:
         for _, count in section_counts:
             frequencies[count] = frequencies.get(count, 0) + 1
         common_count, common_frequency = max(frequencies.items(), key=lambda item: item[1])
-        if common_frequency / len(section_counts) >= 0.75:
+        if common_frequency >= 4 and common_frequency / len(section_counts) >= 0.75:
             excerpt = " | ".join(f"{title}={count}段" for title, count in section_counts)
-            findings.append(Finding("warning", "UNIFORM_SECTION_PARAGRAPHS", None, f"多数章节都采用 {common_count} 段，检查是否重复同一种展开运动。", excerpt))
+            findings.append(Finding("warning", "UNIFORM_SECTION_PARAGRAPHS", None, f"至少四个章节都采用 {common_count} 段，检查是否重复同一种展开运动。", excerpt))
 
     paragraphs = [(line, value) for line, value in prose_paragraphs(lines) if visible_length(value) >= 40]
     lengths = [visible_length(value) for _, value in paragraphs]
