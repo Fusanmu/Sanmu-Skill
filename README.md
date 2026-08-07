@@ -7,8 +7,8 @@ Sanmu 的个人 Skills 集合，用于统一管理和分发 Codex 等 Agent 工�
 | Skill | 用途 | 目录 |
 | --- | --- | --- |
 | `keylol-post-converter` | 将 Markdown 或纯文本转换为其乐论坛 BBCode | [`skills/keylol-post-converter`](skills/keylol-post-converter) |
-| `personal-game-review-prose` | 将已确认的真实体验整理成中文游戏评测 | [`skills/personal-game-review-prose`](skills/personal-game-review-prose) |
-| `interview-game-review` | 通过采访、观点账本和盲点扫描协助完成游戏评测 | [`skills/interview-game-review`](skills/interview-game-review) |
+| `personal-game-review-prose` | 将已确认的真实体验整理成中文游戏评测，负责标题、文笔与终稿质检 | [`skills/personal-game-review-prose`](skills/personal-game-review-prose) |
+| `interview-game-review` | 采访真实体验、核验外部盲点并输出成文交接包 | [`skills/interview-game-review`](skills/interview-game-review) |
 
 ## 目录结构
 
